@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Créer · Sondage de rue</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="creer">
+<div class="wrap">
+  <header>
+    <h1>Sondage <span>de rue</span></h1>
+    <nav>
+      <a href="creer.html" aria-current="page">Créer</a>
+      <a href="repondre.html">Répondre</a>
+      <a href="statistique.html">Statistiques</a>
+    </nav>
+  </header>
+  <!-- PAGE CRÉER -->
+  <section id="v-creer" class="stack">
+    <form class="card" id="newQuestion" autocomplete="off">
+      <div class="eyebrow">Nouvelle question</div>
+      <h2>Ajouter une question</h2>
+      <label class="f" for="q">Question</label>
+      <input type="text" id="q" maxlength="160" placeholder="Ex. : Quel commerce manque le plus dans le quartier ?" required>
+      <div style="height:14px"></div>
+      <label class="f">Réponses proposées (2 à 8)</label>
+      <div id="optInputs"></div>
+      <div class="row">
+        <button type="button" class="btn ghost" id="addOpt">+ Ajouter une réponse</button>
+        <button type="submit" class="btn primary">Ajouter la question</button>
+        <span class="note" id="createMsg"></span>
+      </div>
+    </form>
+    <div class="card">
+      <div class="eyebrow">Mes questions <span id="count"></span></div>
+      <p class="note" style="margin:6px 0 0">Elles s'affichent toutes, dans cet ordre, sur la page Répondre.</p>
+      <div id="manage" style="margin-top:8px"></div>
+    </div>
+  </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
